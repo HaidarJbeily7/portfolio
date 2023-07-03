@@ -1,0 +1,138 @@
+
+:root{
+    --fm-base: 'Inter', Sans serif;
+    --fs-bigger : 40px;
+    --bg-color-primary: #139AD6;
+    --bg-color-secondary: #253C80;
+    --darkblue: #253C80;
+    --lightblue: #365B9E;
+}
+
+
+/* RESET */
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, code,
+del, dfn, em, img, q, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-weight: inherit;
+    font-style: inherit;
+    font-size: 100%;
+    font-family: inherit;
+}
+
+em {
+    font-style: italic;
+}
+
+img{
+    display: block;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+}
+
+strong {
+    font-weight: bold;
+}
+
+html,
+body {
+    margin:0;
+    padding:0;
+    font-family: var(--fm-base);
+    overflow-x: hidden;
+    height:100vh;
+    height: 100dvh;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    border-bottom: 1px solid #EEE;
+    box-shadow: 0px 1px 5px  #EEEEEE;
+}
+nav > a{
+    color: var(--bg-color-primary);
+    text-decoration: none;
+}
+
+.vertical-divider{
+    display: inline;
+    width: 2px;
+    border-left: 2px solid var(--bg-color-primary);
+    margin-right: 6px;
+}
+
+.box{
+    max-width: 1100px;
+    margin: 0 auto;
+    text-wrap: normal;
+}
+
+.container{
+    color: var(--bg-color-primary);
+    min-height: 320px;
+    padding: 24px;
+    flex-wrap: wrap;
+}
+
+.dark-bg-container{
+    color: white;
+    background: linear-gradient(to right, var(--darkblue), var(--lightblue));
+}
+
+.title{
+    font-size: 4rem;
+    font-weight: bold;
+}
+
+.intro{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    /*gap: 50px;*/
+}
+.personal-photo{
+    border-radius: 50px;
+
+    box-shadow: 0px 2px 5px  #EEEEEE;
+}
+
+
+ul li {
+    list-style: none;
+    position: relative;
+    padding: 3px 0 2px 25px;
+    margin: 12px;
+    font-size: 1.2rem;
+}
+
+ul li::before {
+    content: '*';
+    position: absolute;
+    top: 6px;
+    left: 0;
+}
+
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 16px;
+}
+
+
+footer > .icon-link{
+    max-width: 70px;
+}
+
+
