@@ -1,40 +1,38 @@
-
+// src/comic.ts
+import {ComicResponse, ComicIDResponse} from './interfaces';
+import {formatDistanceToNow} from 'date-fns';
 
 document.addEventListener('DOMContentLoaded', () => startFetching());
 
-
-
-
-
-function startFetching(){
-    let email = "h.jbeily@innopolis.university";
+function startFetching(): void {
+    let email: string = "h.jbeily@innopolis.university";
     let url = new URL("https://fwd.innopolis.university/api/hw2");
     let params = {email: email};
     url.search = new URLSearchParams(params).toString();
 
     fetch(url)
         .then(response => response.json())
-        .then(data => getComic(data))
+        .then((data: ComicIDResponse) => getComic(data))
         .catch(err => console.error('Error:', err));
 }
 
-function getComic(id) {
+function getComic(id: ComicIDResponse): void {
     let url = new URL("https://fwd.innopolis.university/api/comic");
-    let params = {id: id};
+    let params = {id: Number(id).toString()};
     url.search = new URLSearchParams(params).toString();
 
     fetch(url)
         .then(response => response.json())
-        .then(data => displayComic(data))
+        .then((data: ComicResponse) => displayComic(data))
         .catch(err => console.error('Error:', err));
 }
 
-
-function displayComic(comic) {
-    let comicContainer = document.getElementById('comicContainer');
-
+function displayComic(comic: ComicResponse): void {
+    let comicContainer: HTMLElement = document.getElementById('comicContainer')!;
+    if (!comicContainer) {
+        throw new Error("Comic container not found");
+    }
     comicContainer.innerHTML = '';
-
 
     let title = document.createElement('h1');
     title.textContent = comic.safe_title;
@@ -43,10 +41,9 @@ function displayComic(comic) {
     img.src = comic.img;
     img.alt = comic.alt;
 
-    let date = new Date(comic.year, comic.month - 1, comic.day);
+    let date = new Date(Number(comic.year), Number(comic.month), Number(comic.day));
     let dateParagraph = document.createElement('p');
-    dateParagraph.textContent = `Published on: ${date.toLocaleDateString()}`;
-
+    dateParagraph.textContent = `Published on: ${date.toLocaleDateString()} (${formatDistanceToNow(date)} ago)`;
 
     let getAnotherComicButton = document.createElement('button')
     getAnotherComicButton.id = 'get-another-comic';
@@ -58,5 +55,3 @@ function displayComic(comic) {
     comicContainer.appendChild(dateParagraph);
     comicContainer.appendChild(getAnotherComicButton);
 }
-
-
