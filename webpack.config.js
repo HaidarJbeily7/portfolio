@@ -1,4 +1,5 @@
 const TerserPlugin = require('terser-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
     mode: 'production',
@@ -19,4 +20,13 @@ module.exports = {
         minimize: true,
         minimizer: [new TerserPlugin()],
     },
+    plugins: [
+        new CopyWebpackPlugin({
+            patterns: [
+                { from: 'assets', to: 'assets' },
+                {from: 'index.html', to:'index.html'},
+                {from: 'comic.html', to:'comic.html'},
+            ],
+        }),
+    ],
 };
