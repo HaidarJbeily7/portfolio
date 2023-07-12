@@ -3,7 +3,7 @@
 	import List from './List.svelte';
 	import type { ListProps } from '$lib/interfaces';
 
-	export let data: { [key: number]: ListProps[] };
+	export let data: { [key: number]: ListProps };
 
 	const workExperienceData: ListProps = data[0];
 	const skillsData: ListProps = data[1];
@@ -38,7 +38,6 @@
 	.box {
 		max-width: 1100px;
 		margin: 0 auto;
-		text-wrap: normal;
 	}
 
 	.container {
