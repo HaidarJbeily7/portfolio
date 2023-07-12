@@ -2,7 +2,7 @@ import type { ListProps } from '$lib/interfaces';
 
 export const prerender = true;
 
-export async function load({ params }): Promise<{ [key: number]: ListProps }> {
+export async function load(): Promise<{ [key: number]: ListProps }> {
 	return {
 		0: {
 			title: 'Work Experience',

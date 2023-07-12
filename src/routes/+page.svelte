@@ -19,7 +19,7 @@
 			</p>
 		</div>
 		<div>
-			<img class="personal-photo" src={MyPhoto} alt="my photo" />
+			<img class="personal-photo" src={MyPhoto} alt="haidar" />
 		</div>
 	</div>
 </div>

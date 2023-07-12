@@ -3,7 +3,7 @@ import type { ComicIDResponse, ComicResponse } from '$lib/interfaces';
 
 export const prerender = true;
 
-export async function load({ params }): Promise<ComicResponse> {
+export async function load(): Promise<ComicResponse> {
 	try {
 		const comicID: ComicIDResponse = await fetchComicID();
 		const comicResponse: ComicResponse = await fetchComic(comicID);
