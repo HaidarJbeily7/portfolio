@@ -1,22 +1,23 @@
 <script>
-    import Header from "./Header.svelte";
-    import Footer from "./Footer.svelte";
-    import './styles.css'
+	import Header from './Header.svelte';
+	import Footer from './Footer.svelte';
+	import './styles.css';
 </script>
+
 <svelte:head>
-    <title>Portfolio</title>
+	<title>Portfolio</title>
 </svelte:head>
 
 <Header />
 
 <main>
-    <slot />
+	<slot />
 </main>
 
 <Footer />
 
 <style>
-    main{
-        min-height: 80vh;
-    }
+	main {
+		min-height: 80vh;
+	}
 </style>

@@ -31,9 +31,7 @@ jobs:
       - name: Build
         run: npm run build
 
-
       - name: Deploy to Pages 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: build
-
