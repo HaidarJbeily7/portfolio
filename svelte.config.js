@@ -10,7 +10,7 @@ const config = {
 
 	kit: {
 		paths: {
-			base: dev ? '' : '	/portfolio'
+			base: dev ? '' : '/portfolio'
 		},
 		adapter: adapter({
 			// default options are shown. On some platforms
