@@ -1,6 +1,4 @@
-
 export interface ComicResponse {
-    num: number;
     safe_title: string;
     img: string;
     alt: string;
@@ -9,6 +7,9 @@ export interface ComicResponse {
     day: string;
 }
 
-export interface ComicIDResponse {
-    id: number;
+export type ComicIDResponse = string;
+
+export interface ListProps {
+    title: string,
+    listItems: string[],
 }

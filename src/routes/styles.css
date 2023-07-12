@@ -1,0 +1,48 @@
+:root {
+    --fm-base: 'Inter', Sans serif;
+    --fs-bigger: 40px;
+    --bg-color-primary: #139AD6;
+    --bg-color-secondary: #253C80;
+    --darkblue: #253C80;
+    --lightblue: #365B9E;
+}
+
+/* RESET */
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, code,
+del, dfn, em, img, q, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-weight: inherit;
+    font-style: inherit;
+    font-size: 100%;
+    font-family: inherit;
+}
+
+em {
+    font-style: italic;
+}
+
+img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+}
+
+strong {
+    font-weight: bold;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--fm-base);
+    overflow-x: hidden;
+    height: 100vh;
+    height: 100dvh;
+}
